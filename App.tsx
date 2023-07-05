@@ -3,6 +3,7 @@ import { StyleSheet } from 'react-native';
 import Splash from './src/pages/Splash';
 import Todo from './src/pages/Todo';
 import Done from './src/pages/Done';
+import NewTask from './src/pages/NewTask';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faList, faCheck } from '@fortawesome/free-solid-svg-icons';
@@ -21,14 +22,14 @@ function HomeTabs() {
         name='Todo' 
         component={Todo}
         options={{
-          tabBarIcon: () => <FontAwesomeIcon icon={faList} />
+          tabBarIcon: () => <FontAwesomeIcon icon={faList} style={{ marginTop: 5 }} />
         }} 
       />
       <Tabs.Screen 
         name='Done' 
         component={Done}
         options={{
-          tabBarIcon: () => <FontAwesomeIcon icon={faCheck} />
+          tabBarIcon: () => <FontAwesomeIcon icon={faCheck} style={{ marginTop: 5 }} />
         }} 
       />
     </Tabs.Navigator>
@@ -41,6 +42,7 @@ function App() {
       <Stack.Navigator >
         <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }}/>
         <Stack.Screen name="Tasks" component={HomeTabs} />
+        <Stack.Screen name="NewTask" component={NewTask} />
       </Stack.Navigator>
     </NavigationContainer>
   );
