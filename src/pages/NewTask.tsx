@@ -1,10 +1,11 @@
-import { useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { setDescription, setTitle } from "../../redux/actions"
 
 import { View, TextInput, Pressable, Text, StyleSheet } from "react-native"
 
 function NewTask() {
-    const [title, setTitle] = useState("")
-    const [description, setDescription] = useState("")
+    const dispatch = useDispatch()
+    const { title, description } = useSelector((state: any) => state.newTask)
 
     return (
         <View style={styles.newTask}>
@@ -12,14 +13,14 @@ function NewTask() {
                 style={styles.newTaskInput}
                 placeholder="Title..."
                 value={title}
-                onChangeText={(e) => setTitle(e)}
+                onChangeText={(e) => dispatch(setTitle(e))}
             />
 
             <TextInput
                 style={styles.newTaskInput}
                 placeholder="Description..."
                 value={description}
-                onChangeText={(e) => setDescription(e)}
+                onChangeText={(e) => dispatch(setDescription(e))}
                 multiline
             />
 
