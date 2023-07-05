@@ -5,7 +5,7 @@ function Splash({ navigation }: { navigation: any}) {
 
     useEffect(() => {
         setTimeout(() => {
-            navigation.replace("Todo")
+            navigation.replace("Tasks")
         }, 2000)
     }, [])
 
