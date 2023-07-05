@@ -15,4 +15,4 @@ function setDescription(description: string) {
     }
 }
 
-export { SET_TASK_DESCRIPTION, SET_TASK_TITLE, setTitle, setDescription}
+export { SET_TASK_DESCRIPTION, SET_TASK_TITLE, setTitle, setDescription }

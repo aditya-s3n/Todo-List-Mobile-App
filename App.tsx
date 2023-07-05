@@ -1,5 +1,3 @@
-import { StyleSheet } from 'react-native';
-
 import Splash from './src/pages/Splash';
 import Todo from './src/pages/Todo';
 import Done from './src/pages/Done';
@@ -52,14 +50,5 @@ function App() {
     </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default App
